@@ -8,8 +8,8 @@ if (!isset($id) || !is_numeric($id))
 die("invalid student id");
 }
 
-$stmt = $connection->prepare("SELECT ID FROM students WHERE id = '$id'");
-$stmt->execute();
+$stmt = $connection->prepare("SELECT ID FROM students WHERE id =:id ");
+$stmt->execute(['id' => $id]);
 
 $student = $stmt->fetch(PDO::FETCH_ASSOC);
 if (empty($student))
