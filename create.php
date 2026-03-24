@@ -68,6 +68,6 @@ name : <input type="text" name="name" value="<?= $name?>"> <br>
 email : <input type="text" name="email" value="<?= $email?>"> <br>
 phone : <input type="text" name="phone" value="<?= $phone?>"> <br>
 
-<button type="submit" name="submit" >add student </button>
+<button type="submit" name="submit" > student </button>
 
 </form>

@@ -60,7 +60,7 @@ if (isset($_POST['submit'])){
     $stmt->execute();
 
     if($stmt->fetch()){
-        $errors[] = "phone aready exist";
+        $errors[] = "phone aready exist ";
     }
    }
 
