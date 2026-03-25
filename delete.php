@@ -1,12 +1,13 @@
 <?php
 include "config.php";
 
-$id= isset($_GET['id']) ? $_GET['id'] : null;
+$id = isset($_GET['id']) ? $_GET['id']: null;
 
-if (!isset($id) || !is_numeric($id))
-{
-die("invalid student id");
+if (!isset($id) || !is_numeric($id)){
+die ("invalide student id");
 }
+
+
 
 $stmt = $connection->prepare("SELECT ID FROM students WHERE id =:id ");
 $stmt->execute(['id' => $id]);
@@ -23,4 +24,4 @@ $stmt->execute();
 header("location:index.php");
 exit;
 ?>
-
+?>
