@@ -44,7 +44,7 @@ $pages = ceil($total / $limit)
             <tr>
 
                 <td> <?= $row['id'] ?> </td>
-                <td> <img src="<?= $row['image'] ?>" alt="img" style="width: 45px;" > </td>
+                <td> <img src="<?= $row['image'] ?>" alt="img" style="width: 45px;"> </td>
                 <td> <?= $row['name'] ?> </td>
                 <td> <?= $row['email'] ?> </td>
                 <td> <?= $row['phone'] ?> </td>
