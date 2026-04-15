@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+include "../config.php";
 
 $search = $_GET['search'] ?? '';
 
@@ -20,9 +20,15 @@ $countStudents->execute();
 $total = $countStudents->fetchColumn();
 $pages = ceil($total / $limit)
 ?>
+<div class="d-flex justify-content-between align-items-center mb-3">
+
+<h3>Students</h3>
 <a href="create.php" class="btn btn-primary">ADD STUDENT</a>
 
-<form method="GET">
+</div>
+
+<form method="GET" class="pt-2 pb-2">
+        
     <input type="text" class="form-control" name="search" placeholder="search..." value="<?= htmlspecialchars($search) ?>">
 
 </form>

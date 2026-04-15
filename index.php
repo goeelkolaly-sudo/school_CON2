@@ -1,6 +1,4 @@
 <?php
-$title = 'Students';
-$content = 'contents/index.php';
-include 'layouts/main.php';
-
+header("location: students/index.php");
+exit;   
 ?>

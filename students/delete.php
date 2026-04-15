@@ -1,10 +1,11 @@
 <?php
-include "config.php";
+include "../auth.php";
+include "../config.php";
 
-$id = isset($_GET['id']) ? $_GET['id']: null;
+$id = $_GET['id'] ?? null;
 
 if (!isset($id) || !is_numeric($id)){
-die ("invalide student id");
+die ("invalid student id");
 }
 
 
